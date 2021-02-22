@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
+    isMenuOpened: false,
     articles: [
       {
         title: "Article Name",
@@ -11,8 +12,14 @@ export default createStore({
       }
     ],
   },
-  mutations: {},
+  mutations: {
+    toggleMenuState(state) {
+      state.isMenuOpened = !state.isMenuOpened;
+    }
+  },
   actions: {},
   modules: {},
-  getters: {},
+  getters: {
+    getMenuState: state => state.isMenuOpened,
+  },
 });

@@ -3,14 +3,7 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     isMenuOpened: false,
-    articles: [
-      {
-        title: "Article Name",
-        category: "LIFESTYLE",
-        imgURL: "",
-        text: "fdsjksdfps,dfs dkfsúpf úsdfp dsfldäsl äňs.df.daä.l sfd,s"
-      }
-    ],
+    articles: [],
   },
   mutations: {
     toggleMenuState(state) {

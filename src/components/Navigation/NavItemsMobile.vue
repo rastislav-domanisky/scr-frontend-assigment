@@ -1,6 +1,6 @@
 <template>
   <div class="NavItemsMobile">
-    <router-link v-for="item in links" :key="item" :to="'/' + item">
+    <router-link v-for="item in links" :key="item" :to="'/' + item" @click="closeDropdownMenu">
       <div class="navItemMobile">
         {{ item }}
       </div>
@@ -14,6 +14,11 @@ export default {
   props: {
     links: Array,
   },
+  methods: {
+    closeDropdownMenu() {
+      this.$store.commit("closeMenu");
+    }
+  }
 };
 </script>
 
@@ -28,6 +33,7 @@ export default {
   left: 0;
   top: 60px;
   z-index: 10;
+  background: #FFF;
 
   @media (min-width: 600px) {
       display: none;

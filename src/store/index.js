@@ -8,7 +8,10 @@ export default createStore({
   mutations: {
     toggleMenuState(state) {
       state.isMenuOpened = !state.isMenuOpened;
-    }
+    },
+    closeMenu(state) {
+      state.isMenuOpened = false;
+    },
   },
   actions: {},
   modules: {},

@@ -3,14 +3,17 @@
   <main class="mainArea">
     <router-view />
   </main>
+  <Footer />
 </template>
 
 <script>
 import Navigation from "./components/Navigation";
+import Footer from './components/Footer';
 
 export default {
   components: {
     Navigation,
+    Footer,
   },
 };
 </script>
@@ -34,7 +37,7 @@ html {
   .mainArea {
     background: #fff;
     width: 100%;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px - 100px);
     box-sizing: border-box;
   }
 }

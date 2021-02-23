@@ -3,7 +3,7 @@
     <Spinner v-show="!isLoaded" />
     <LatestArticleItem
       v-show="isLoaded"
-      v-for="(item, index) in articleIds"
+      v-for="(item, index) in articleIds.slice(0, 4)"
       :key="index"
       :id="item"
     />

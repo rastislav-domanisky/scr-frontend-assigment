@@ -7,7 +7,9 @@
   >
     <p class="category">{{ category }}</p>
     <p class="title">{{ title }}</p>
-    <div class="readMoreBtn">Read More</div>
+    <router-link :to="'/blog/' + id">
+      <div class="readMoreBtn">Read More</div>
+    </router-link>
   </div>
 </template>
 
@@ -63,6 +65,10 @@ export default {
     padding: 0;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   .readMoreBtn {
     box-sizing: border-box;
     width: 90px;
@@ -74,6 +80,7 @@ export default {
     justify-content: center;
     border: #fff solid 1px;
     cursor: pointer;
+    color: #FFF;
   }
 
   .readMoreBtn:hover {

@@ -20,6 +20,9 @@ export default createStore({
     setLoadedState(state, payload) {
       state.isLoaded = payload;
     },
+    clearArticleIds(state) {
+      state.articleIds = [];
+    }
   },
   actions: {
     getArticleIds: async (context) => {

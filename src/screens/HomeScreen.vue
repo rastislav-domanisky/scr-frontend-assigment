@@ -1,6 +1,7 @@
 <template>
   <div class="HomeScreen">
     <LatestArticles />
+    <h1>Welcome to our blog</h1>
   </div>
 </template>
 
@@ -21,5 +22,10 @@ export default {
   width: 100%;
   min-height: calc(100vh - 60px - 100px);
   box-sizing: border-box;
+
+  h1 {
+    margin: 90px 30px;
+    text-align: center;
+  }
 }
 </style>

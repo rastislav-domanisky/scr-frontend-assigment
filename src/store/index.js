@@ -1,9 +1,14 @@
 import { createStore } from "vuex";
 
+import Article from '../models/Article';
+
+const article = new Article();
+
 export default createStore({
   state: {
     isMenuOpened: false,
-    articles: [],
+    isLoaded: false,
+    articleIds: [],
   },
   mutations: {
     toggleMenuState(state) {
@@ -12,10 +17,22 @@ export default createStore({
     closeMenu(state) {
       state.isMenuOpened = false;
     },
+    setLoadedState(state, payload) {
+      state.isLoaded = payload;
+    },
   },
-  actions: {},
+  actions: {
+    getArticleIds: async (context) => {
+      context.commit("setLoadedState", false);
+      context.state.articleIds = [];
+      context.state.articleIds = await article.loadArticleIds();
+      context.commit("setLoadedState", true);
+    }
+  },
   modules: {},
   getters: {
     getMenuState: state => state.isMenuOpened,
+    getLoadedState: state => state.isLoaded,
+    getLoadedArticleIds: state => state.articleIds,
   },
 });

@@ -7,7 +7,7 @@ import ContactScreen from '../screens/ContactScreen';
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "",
     component: HomeScreen,
   },
   {

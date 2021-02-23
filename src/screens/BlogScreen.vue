@@ -1,5 +1,5 @@
 <template>
-  <div class="BlogScreen">
+  <div class="BlogScreen" :class="{isNotLoaded: !isLoaded}">
     <Spinner v-show="!isLoaded" />
     <ListingItem
       v-show="isLoaded"
@@ -49,5 +49,11 @@ export default {
     width: 70%;
     margin-top: 50px;
   }
+}
+
+.isNotLoaded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

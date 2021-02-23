@@ -1,5 +1,5 @@
 <template>
-  <div class="LatestArticles" @click="test">
+  <div class="LatestArticles" :class="{notLoaded: !isLoaded}">
     <Spinner v-show="!isLoaded" />
     <LatestArticleItem
       v-show="isLoaded"
@@ -51,5 +51,12 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+}
+
+.notLoaded {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 </style>

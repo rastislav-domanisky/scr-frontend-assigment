@@ -1,5 +1,5 @@
 <template>
-  <div class="ArticleScreen" :class="{ isNotLoaded: !isLoaded, isNotLoaded: isError }">
+  <div class="ArticleScreen" :class="{ isNotLoaded: !isLoaded || isError }">
     <Spinner v-show="!isLoaded" />
     <div class="is404" v-show="isLoaded && isError">
         404<br>

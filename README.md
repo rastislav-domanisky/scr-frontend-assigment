@@ -1,4 +1,9 @@
-# scr-frontend-assigment
+# SCR-frontend-assigment
+
+## Used Technologies
+* Vue.js (Router, Vuex)
+* Sass
+* Firebase (backend)
 
 ## Project setup
 ```

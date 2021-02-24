@@ -18,7 +18,7 @@ const db = firebase.firestore();
 class Article {
     loadArticleIds = async () => {
         const doc = await db.collection("MAIN").doc("articles").get();
-        return doc.data()["all"];
+        return doc.data()["all"].reverse();
     }
 
     loadArticleData = async (id) => {

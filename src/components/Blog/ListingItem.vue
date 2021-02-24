@@ -5,6 +5,9 @@
     <h3 class="heading">{{ title }}</h3>
     <div class="divider" />
     <div class="text">{{ text.substring(0, 220) + "..." }}</div>
+    <router-link :to="'/blog/'+id">
+      <p class="btn">Read More</p>
+    </router-link>
   </div>
 </template>
 
@@ -86,6 +89,16 @@ export default {
     font-size: 1rem;
     text-align: center;
     padding: 10px 20px;
+    color: rgba($color: #000000, $alpha: 0.8);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .btn {
+    color: rgba($color: #000000, $alpha: 0.8);
+    font-weight: bold;
     margin-bottom: 60px;
   }
 }
